@@ -6,6 +6,7 @@
 }
 body{
 	font-size: 20px;
+	overflow: hidden;
 
 }
 
@@ -18,7 +19,7 @@ src: url(GanpatiSymbolys.TTF);
 }
 header{
 	width: 100%;
-	height: 90vh;
+	height: 97vh;
 	background-image: url('back1.png');
 	background-size: 100% 100%;
 
