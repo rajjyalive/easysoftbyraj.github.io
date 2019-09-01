@@ -3,7 +3,6 @@
 	padding: 0;
 	font-family: 'Cinzel', serif;
 	box-sizing: border-box;
-	overflow: hidden;
 }
 body{
 	font-size: 20px;
@@ -36,6 +35,12 @@ header h2{
 header h2 span {
 	font-family: myFirstFont;
 }
+.container-fluid p{
+	font-size: 15px;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	background-color:orangered;
+	color :white;
+}
 @media(max-width:874px){
 	header h2{
 		font-size: 180%;
@@ -50,6 +55,9 @@ header h2 span {
 	header h2 span{
 		font-size:120%;
 
+	}
+	.container-fluid p{
+		font-size:12px;
 	}
 }
 
@@ -101,4 +109,3 @@ header h2{
 }
 }
 
-https://www.mp3mine.com/mp3/vakratunda-mahakaya-song-female-voice.htmlS
