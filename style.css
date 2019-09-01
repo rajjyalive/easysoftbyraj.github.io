@@ -2,30 +2,55 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Cinzel', serif;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+body{
+	font-size: 20px;
+
 }
 
 @font-face {
 font-family: myFirstFont;
 src: url(GanpatiSymbolys.TTF);
 }
-
+.centerimg{
+	width: 100%;
+}
 header{
 	width: 100%;
 	height: 100vh;
 	background-image: url('back1.png');
-	background-size: 100% 100%
+	background-size: 100% 100%;
+
 }
 
 header h2{
 	text-align: center;
 	word-spacing: 10px;
-	font-size: 4em;
+	font-size: 3em;
 	font-weight: 600;
 	animation:  ganpatiji 1s infinite;
 }
 
 header h2 span {
 	font-family: myFirstFont;
+}
+@media(max-width:874px){
+	header h2{
+		font-size: 180%;
+	}
+	header h2 span{
+		font-size:180%;
+
+	}
+}
+@media(max-width:641px){
+	
+	header h2 span{
+		font-size:120%;
+
+	}
 }
 
 @keyframes ganpatiji{
@@ -41,6 +66,8 @@ header h2 span {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	text-align: center;
+	margin:auto;
 
 }
 
@@ -58,21 +85,19 @@ header h2 span {
 header h2{
 
 	word-spacing: 5px;
-	font-size: 3em;
+	font-size: 180%;
+	
 	}
 
-.centerimg{
-	margin-top: 60px;
-}
-
 .centerimg img{
-	width: 250px;
+	width: 100%;
+	margin: auto;
 }
 
 .centerimg h3{
-	font-size: 1.2em;
+	font-size: 107%;
 	word-spacing: 0px;
-	width: 100%;
+	width: 90%;
 }
 }
 
