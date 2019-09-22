@@ -1,0 +1,61 @@
+body{
+    overflow-x: hidden;
+}
+.bg-ess{
+	background-color: #00284d !important;
+	color: whitesmoke !important;
+}
+.text-ess{
+    color:#00284d !important;
+}
+/*floating button*/
+a.scrollup{
+    color:#fff;
+	height:40px;
+	width:40px;
+	font-size:12px;
+	line-height:30px;
+	text-align:center;
+	text-decoration:none;
+	position:fixed;
+	bottom:20px;
+	right:40px;	
+	opacity:0,5;
+	border-radius:50%;
+	z-index:999;
+}
+@font-face {
+  font-family: esslogo;
+  src: url(fonts/Staatliches-Regular.ttf);
+}
+@font-face {
+  font-family: esslogo2;
+  src: url(fonts/Graduate-Regular.ttf);
+}
+#logo{
+	font-family: esslogo2;
+	font-size: 200%;
+	color: #00284d !important;
+	font-weight: 300;
+	padding-bottom: 3px;
+	border-bottom: 2px ridge;
+	text-shadow: 3px 2px 5px;
+}
+.dropdown-menu{
+     background-color: #00284d !important;
+     border:2px solid #ffc107;
+}
+.dropdown-menu .dropdown-item{
+	background-color:#ffc107 !important; 
+	color:#00284d !important;
+	border-bottom: 1px inset !important;
+
+}
+.dropdown-menu .dropdown-item:hover{
+	background-color:#00284d !important; 
+	color: #ffc107 !important;
+}
+.borderup{
+		border-top: 1px solid #ffc107 !important;
+
+}
