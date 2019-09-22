@@ -48,7 +48,7 @@ a.scrollup{
 .dropdown-menu .dropdown-item{
 	background-color:#ffc107 !important; 
 	color:#00284d !important;
-	border-bottom: 1px inset !important;
+	border-bottom: 1px solid #00284d !important;
 
 }
 .dropdown-menu .dropdown-item:hover{
