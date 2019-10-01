@@ -38,8 +38,10 @@ a.scrollup{
 	color: #00284d !important;
 	font-weight: 300;
 	padding-bottom: 3px;
-	border-bottom: 2px ridge;
 	text-shadow: 3px 2px 5px;
+}
+.logo{
+	margin-left: 210px;
 }
 .dropdown-menu{
      background-color: #00284d !important;
@@ -48,7 +50,7 @@ a.scrollup{
 .dropdown-menu .dropdown-item{
 	background-color:#ffc107 !important; 
 	color:#00284d !important;
-	border-bottom: 1px solid #00284d !important;
+	border-bottom: 1px inset !important;
 
 }
 .dropdown-menu .dropdown-item:hover{
@@ -59,3 +61,41 @@ a.scrollup{
 		border-top: 1px solid #ffc107 !important;
 
 }
+/*institute login section*/
+.elements{
+       background-color: #00284d;
+       color: #ffc107;
+       padding:15px;
+       text-transform: uppercase;
+       text-decoration: none;
+       border-radius: 5px;
+       font-weight: 700;
+       letter-spacing: 2px;
+}
+.elements:hover{
+	background-color: #ffc107;
+	color: #00284d;
+	border:2px solid #00284d;
+	border-radius: 5px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+/*admission page*/
+#add p{
+	padding-bottom: 7px;
+}
+.star{
+	color:red;
+}
+#resubmit:hover{
+    background-color:#ffc107 !important;
+    color:#00284d !important;
+	border:2px solid #00284d !important;
+}
+.form-control{
+	padding:2px 2px;
+}
+.p-ess{
+	padding:2px 2px;
+}
+/*student profile section*/
