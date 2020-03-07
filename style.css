@@ -1,16 +1,36 @@
 body{
-    overflow-x: hidden;
+	overflow-x: hidden !important;
 }
 .bg-ess{
 	background-color: #00284d !important;
 	color: whitesmoke !important;
 }
-.text-ess{
-    color:#00284d !important;
+#bg-essy{
+	background-color: #ffc107 !important;
+	color: #00284d !important;
 }
+.text-ess{
+	color:#00284d !important;
+}
+/*left sidebar links*/
+.links:hover{
+	color: #ffc107 !important;
+}
+nav ul li{
+	margin:0px 4px !important;
+}
+.social{
+	margin:0px -10px;
+
+}
+
+#logo-wrap{
+	margin-top: -35px;
+}
+
 /*floating button*/
 a.scrollup{
-    color:#fff;
+	color:#fff;
 	height:40px;
 	width:40px;
 	font-size:12px;
@@ -25,12 +45,12 @@ a.scrollup{
 	z-index:999;
 }
 @font-face {
-  font-family: esslogo;
-  src: url(fonts/Staatliches-Regular.ttf);
+	font-family: esslogo;
+	src: url(fonts/Staatliches-Regular.ttf);
 }
 @font-face {
-  font-family: esslogo2;
-  src: url(fonts/Graduate-Regular.ttf);
+	font-family: esslogo2;
+	src: url(fonts/Graduate-Regular.ttf);
 }
 #logo{
 	font-family: esslogo2;
@@ -40,12 +60,11 @@ a.scrollup{
 	padding-bottom: 3px;
 	text-shadow: 3px 2px 5px;
 }
-.logo{
-	margin-left: 210px;
-}
+
+
 .dropdown-menu{
-     background-color: #00284d !important;
-     border:2px solid #ffc107;
+	background-color: #00284d !important;
+	border:2px solid #ffc107;
 }
 .dropdown-menu .dropdown-item{
 	background-color:#ffc107 !important; 
@@ -58,28 +77,10 @@ a.scrollup{
 	color: #ffc107 !important;
 }
 .borderup{
-		border-top: 1px solid #ffc107 !important;
+	border-top: 1px solid #ffc107 !important;
 
 }
-/*institute login section*/
-.elements{
-       background-color: #00284d;
-       color: #ffc107;
-       padding:15px;
-       text-transform: uppercase;
-       text-decoration: none;
-       border-radius: 5px;
-       font-weight: 700;
-       letter-spacing: 2px;
-}
-.elements:hover{
-	background-color: #ffc107;
-	color: #00284d;
-	border:2px solid #00284d;
-	border-radius: 5px;
-	text-transform: uppercase;
-	text-decoration: none;
-}
+
 /*admission page*/
 #add p{
 	padding-bottom: 7px;
@@ -88,8 +89,8 @@ a.scrollup{
 	color:red;
 }
 #resubmit:hover{
-    background-color:#ffc107 !important;
-    color:#00284d !important;
+	background-color:#ffc107 !important;
+	color:#00284d !important;
 	border:2px solid #00284d !important;
 }
 .form-control{
@@ -98,4 +99,143 @@ a.scrollup{
 .p-ess{
 	padding:2px 2px;
 }
-/*student profile section*/
+.copyright{
+	background-color: #00284d;
+	
+}
+.copytext{
+	font-size: 70%;
+}
+.event-text{
+	font-size: 60%;
+}
+.back-btn{
+	font-size: 200%;
+	margin-left:100px;
+}
+
+/*institute page section*/
+/*institute page section*/
+
+
+
+
+
+
+
+/*responsive page coding*/
+/*responsive page coding*/
+
+@media screen and (max-width: 991px) {
+
+	#logo{
+		font-size: 120%;
+	}
+	#call{
+		font-size: 70%;
+	}
+	#call img{
+		height: 7%;
+		width:7%;
+	}
+	
+	#social li{
+		margin-left: -20px;
+	}
+	#social li a{
+		font-size: 75%;
+	}
+
+
+	#leftSidebar{
+		display: none;
+	}
+	#time{
+		display: none;
+	}
+	/*#dropdownMenuButton{
+		width: 70%;
+	}
+	#navbarmenu{
+		width: 70%;
+	}
+	#navbarmenu ul li a{
+		width: 70%;
+	}
+	#navbarmenu{
+		position: absolute;
+		top: 50px;
+		right: -12%;
+		z-index: 2000;
+	}*/
+	#fbtext{
+		font-size: 120%;
+	} 
+	.fb-para{
+		font-size: 70%;
+	}
+	.s-link{
+		font-size: 110%;
+
+
+	}
+	.textfooter{
+		font-size: 80%;
+	}
+	.scrollup img{
+		height: 55%;
+		width: 55%;
+	}
+	.event-text{
+		font-size: 40%;
+	}
+	/*admission.php*/
+.backbtn{
+	font-size: 80%;
+}
+
+}
+/*sidebar*/
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/*institute.php*/
+/*institute.php*/
+/*institute.php*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

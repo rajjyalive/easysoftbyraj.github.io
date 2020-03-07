@@ -1,0 +1,270 @@
+Q:1
+Create a table Student with fields
+RollNo      Number (6)        Primary key
+Name        Character (25)
+Batch       Character (20)
+Total       Number (4)
+Batch have values COMMERCE, SCIENCE, HUMANITIES
+
+
+SQL>  CREATE TABLE STUDENT(
+  2   ROLLNO NUMBER(6) PRIMARY KEY,
+  3  NAME CHARACTER(25),
+  4  BRANCH CHARACTER(20) CHECK(BRANCH IN('COMMERCE','SCIENCE','HUMANITIES')),
+  5  TOTAL NUMBER(4));
+
+Table created.
+
+
+Q:2
+Show the structure of the STUDENT table.
+
+
+SQL> DESC STUDENT;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ROLLNO                                    NOT NULL NUMBER(6)
+ NAME                                               CHAR(25)
+ BRANCH                                             CHAR(20)
+ TOTAL                                              NUMBER(4)
+
+
+Q:3
+Insert data in the fields RollNo, Name, Batch, and Total. (at least 6 records)
+
+
+SQL> INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&BRANCH',&TOTAL);
+Enter value for rollno: 201
+Enter value for name: JOHN
+Enter value for branch: COMMERCE
+Enter value for total: 300
+old   1: INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&BRANCH',&TOTAL)
+new   1: INSERT INTO STUDENT VALUES(201,'JOHN','COMMERCE',300)
+
+1 row created.
+
+
+SQL> /
+Enter value for rollno: 202
+Enter value for name: BABU
+Enter value for branch: SCIENCE
+Enter value for total: 200
+old   1: INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&BRANCH',&TOTAL)
+new   1: INSERT INTO STUDENT VALUES(202,'BABU','SCIENCE',200)
+
+1 row created.
+
+
+SQL> /
+Enter value for rollno: 203
+Enter value for name: GEORGE
+Enter value for branch: COMPUTER
+Enter value for total: 500
+old   1: INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&BRANCH',&TOTAL)
+new   1: INSERT INTO STUDENT VALUES(203,'GEORGE','COMPUTER',500)
+INSERT INTO STUDENT VALUES(203,'GEORGE','COMPUTER',500)
+*
+ERROR at line 1:
+ORA-02290: check constraint (SCOTT.SYS_C003040) violated
+
+
+SQL> /
+Enter value for rollno: 203
+Enter value for name: GEORGE
+Enter value for branch: HUMANITIES
+Enter value for total: 500
+old   1: INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&BRANCH',&TOTAL)
+new   1: INSERT INTO STUDENT VALUES(203,'GEORGE','HUMANITIES',500)
+
+1 row created.
+
+SQL> /
+Enter value for rollno: 204
+Enter value for name: JIBIN
+Enter value for branch: COMMERCE
+Enter value for total: 400
+old   1: INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&BRANCH',&TOTAL)
+new   1: INSERT INTO STUDENT VALUES(204,'JIBIN','COMMERCE',400)
+
+1 row created.
+
+
+SQL> /
+Enter value for rollno: 205
+Enter value for name: VARGHESE
+Enter value for branch: SCIENCE
+Enter value for total: 250
+old   1: INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&BRANCH',&TOTAL)
+new   1: INSERT INTO STUDENT VALUES(205,'VARGHESE','SCIENCE',250)
+
+1 row created.
+
+SQL> /
+Enter value for rollno: 206
+Enter value for name: SOMAN
+Enter value for branch: HUMANITIES
+Enter value for total: 420
+old   1: INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&BRANCH',&TOTAL)
+new   1: INSERT INTO STUDENT VALUES(206,'SOMAN','HUMANITIES',420)
+
+1 row created.
+
+
+Q:4
+Display a list of students having mark < 400.
+
+
+SQL> SELECT * FROM STUDENT WHERE TOTAL < 400;
+
+    ROLLNO NAME                      BRANCH                    TOTAL
+---------- ------------------------- -------------------- ----------
+       201 JOHN                      COMMERCE                    300
+       202 BABU                      SCIENCE                     200
+       205 VARGHESE                  SCIENCE                     250
+
+
+Q:5
+Display the number of students in each batch.
+
+
+SQL> SELECT BRANCH, COUNT(*) FROM STUDENT GROUP BY BRANCH;
+
+BRANCH                 COUNT(*)
+-------------------- ----------
+COMMERCE                      2
+HUMANITIES                    2
+SCIENCE                       2
+
+
+Q:6
+Display the highest and lowest mark in COMMERCE batch.
+
+
+SQL> SELECT MIN(TOTAL), MAX(TOTAL) FROM STUDENT WHERE BRANCH='COMMERCE';
+
+MIN(TOTAL) MAX(TOTAL)
+---------- ----------
+       300        400
+
+
+Q:7
+Display the Names of all students in COMMERCE batch.
+
+
+SQL> SELECT NAME FROM STUDENT WHERE BRANCH ='COMMERCE';
+
+NAME
+-------------------------
+JOHN
+JIBIN
+
+
+Q:8
+Display the highest mark in the table. 
+
+
+SQL> SELECT MAX(TOTAL) FROM STUDENT;
+
+MAX(TOTAL)
+----------
+       500
+
+
+Q:9
+Display the names of students in the descending order of total mark.
+
+
+SQL> SELECT ROLLNO, NAME, TOTAL FROM STUDENT ORDER BY TOTAL DESC;
+
+    ROLLNO NAME                           TOTAL
+---------- ------------------------- ----------
+       203 GEORGE                           500
+       206 SOMAN                            420
+       204 JIBIN                            400
+       201 JOHN                             300
+       205 VARGHESE                         250
+       202 BABU                             200
+
+6 rows selected.
+
+
+Q:10
+Display the details of students with RollNo from 202 to 205.
+
+
+SQL> SELECT * FROM STUDENT WHERE ROLLNO BETWEEN 202 AND 205;
+
+    ROLLNO NAME                      BRANCH                    TOTAL
+---------- ------------------------- -------------------- ----------
+       202 BABU                      SCIENCE                     200
+       203 GEORGE                    HUMANITIES                  500
+       204 JIBIN                     COMMERCE                    400
+       205 VARGHESE                  SCIENCE                     250
+
+
+Q:11
+Display the total number of students in each batch in the order of total number.
+
+
+SQL>  SELECT BRANCH, COUNT(*) "Number" FROM STUDENT GROUP BY BRANCH ORDER BY 2;
+
+BRANCH                   Number
+-------------------- ----------
+COMMERCE                      2
+HUMANITIES                    2
+SCIENCE                       2
+
+
+Q:12
+Show all the records from the table.
+
+
+SQL> SELECT * FROM STUDENT;
+
+    ROLLNO NAME                      BRANCH                    TOTAL
+---------- ------------------------- -------------------- ----------
+       201 JOHN                      COMMERCE                    300
+       202 BABU                      SCIENCE                     200
+       203 GEORGE                    HUMANITIES                  500
+       204 JIBIN                     COMMERCE                    400
+       205 VARGHESE                  SCIENCE                     250
+       206 SOMAN                     HUMANITIES                  420
+
+6 rows selected.
+
+
+
+Q:13
+Update the branch of student with roll no 201 as Science.
+
+
+SQL> UPDATE STUDENT SET BRANCH='SCIENCE' WHERE ROLLNO=201;
+
+1 row updated.
+
+
+Q:14
+Display the total number of students in each batch in the order of total number.
+
+
+SQL>  SELECT BRANCH, COUNT(*) "Number" FROM STUDENT GROUP BY BRANCH ORDER BY 2;
+
+BRANCH                   Number
+-------------------- ----------
+COMMERCE                      1
+HUMANITIES                    2
+SCIENCE                       3
+
+
+Q:15
+Display the total number of students in each batch in the descending order of total number.
+
+
+SQL>  SELECT BRANCH, COUNT(*) "Number" FROM STUDENT GROUP BY BRANCH ORDER BY 2 DESC;
+
+BRANCH                   Number
+-------------------- ----------
+SCIENCE                       3
+HUMANITIES                    2
+COMMERCE                      1
+
